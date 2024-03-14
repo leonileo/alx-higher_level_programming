@@ -8,7 +8,7 @@ def main():
         print("1 argument:")
         print("{0}: {1}".format(sys.argv.index(first), first))
     elif not sys.argv[1:]:
-        print("{0} arguments.".format(len(sys.argv[1:]) ))
+        print("{0} arguments.".format(len(sys.argv[1:])))
     else:
         print("{0} arguments:".format(len(sys.argv[1:])))
         for i in sys.argv[1:]:
