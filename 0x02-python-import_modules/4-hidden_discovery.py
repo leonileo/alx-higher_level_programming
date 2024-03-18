@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-from hidden_4 import *
+import hidden_4
 
 
 def main():
-    names = dir()
+    names = dir(hidden_4)
     for i in range(0, len(names)):
-        if name[i][:2] != "__":
-            print("{:s}".format(names[i]))
+        if names[i][:2] != "__":
+            print("{0}".format(names[i]))
 
 
 if __name__ == "__main__":
