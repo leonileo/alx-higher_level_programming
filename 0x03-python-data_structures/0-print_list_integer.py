@@ -5,5 +5,5 @@ def print_list_integer(my_list=[]):
         print("{0}".format(i))
 
 
-if __name__ == "__main__":
+if __name__ == "__print_list_integer__":
     print_list_integer()
