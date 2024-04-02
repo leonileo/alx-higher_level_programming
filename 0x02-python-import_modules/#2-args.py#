@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+import sys
+num = 0
+for i in sys.argv:
+        print(sys.argv)
