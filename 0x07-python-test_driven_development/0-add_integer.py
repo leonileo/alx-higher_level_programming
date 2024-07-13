@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 
-""" This module add two integers 
+""" Module 0-add_integer 
+    contain one method and accept two values of int or float types
     casting the numbers into integers.
-    Their type have must be either int or float,
-    if not it raises a TypeError: x must be an integer
+    returns an int sum
 """
 
 def add_integer(a, b=98):
-    """ add_integer(1, 2)
-        3
+    """
+        Return the summation of two argument
     """
     if not isinstance(a, (int, float)):
         raise TypeError('a must be an integer')
