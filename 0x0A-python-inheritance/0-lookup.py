@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
-def lookup(func):
-    return list(dir(func))
+def lookup(obj):
+    return list(dir(obj))
