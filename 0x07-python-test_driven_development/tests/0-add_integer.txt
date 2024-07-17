@@ -57,6 +57,6 @@ If either argument is a non-integer and non-float, a TypeError is raised:
 
 ::
 
-   >>> add_integer(1, "some string")
+   >>> add_integer(None)
    Traceback (most recent call last):
-   TypeError: b must be an integer
+   TypeError: a must be an integer
