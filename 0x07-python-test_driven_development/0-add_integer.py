@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-
-""" Module 0-add_integer 
-    contain one method and accept two values of int or float types
-    casting the numbers into integers.
-    returns an int sum
-"""
+# 0-add_integer.py
+""" Defines an integer addition function. """
 
 def add_integer(a, b=98):
-    """
-        Return the summation of two argument
+    """ Return the integer addition of a and b.
+    Float arguments are typecasted to ints before addition is performed.
+    Raises:
+        TypeError: If either of a or b is a non-integer and non-float.
     """
     if type(a) != int and type(a) != float:
         raise TypeError('a must be an integer')
