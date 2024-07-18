@@ -55,3 +55,8 @@ If either argument is a non-integer and non-float, a TypeError is raised:
    >>> add_integer(None)
    Traceback (most recent call last):
    TypeError: a must be an integer
+
+::
+
+   >>> add_integer(float('inf'))
+   OverflowError: cannot convert float infinity to integer
