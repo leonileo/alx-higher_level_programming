@@ -20,11 +20,6 @@ Usage
 
 ::
 
-   >>> add_integer(2, 3)
-   5
-
-::
-
    >>> add_integer(2.5, -2)
    0
 
@@ -60,3 +55,8 @@ If either argument is a non-integer and non-float, a TypeError is raised:
    >>> add_integer(None)
    Traceback (most recent call last):
    TypeError: a must be an integer
+
+::
+
+   >>> add_integer(float('inf'))
+   OverflowError: cannot convert float infinity to integer
