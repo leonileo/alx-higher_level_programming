@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" base.py """
+""" Defines a base model class. """
 
 class Base:
     """Represent the base model.
