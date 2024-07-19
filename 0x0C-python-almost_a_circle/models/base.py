@@ -2,9 +2,12 @@
 """ base.py """
 
 class Base:
-    """ This is the base class, it recvieve one argument id.
-       If the id is passed it'll add to the private attribute nb_objects..
+    """Represent the base model.
+    Represents the "base" for all other classes in project 0x0C*.
+    Attributes:
+        __nb_objects (int): The number of instantiated Bases.
     """
+    
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -12,8 +15,7 @@ class Base:
         Args:
             id (int): The identity of the new Base.
         """
-        self.id = id
-        if (self.id != None):
+        if id != None:
             self.id = id
         else:
             Base.__nb_objects += 1
