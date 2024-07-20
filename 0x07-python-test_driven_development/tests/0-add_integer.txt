@@ -60,6 +60,6 @@ The function will raise a ``TypeError`` if one of the arguments is not an int or
 
 ::
 
-   >>> add_integer([1], 5)
+   >>> add_integer(float('-inf'), 5)
    Traceback (most recent call last):
-   TypeError: a must be an integer
+   OverflowError: cannot convert float infinity to integer
