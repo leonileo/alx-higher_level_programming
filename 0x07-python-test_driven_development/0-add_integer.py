@@ -18,11 +18,7 @@ def add_integer(a, b=98):
     elif (type(b) is not int and type(b) is not float):
         raise TypeError('b must be an integer')
     else:
-        if (type(a) is float('inf') or type(a) is float('-inf')):
-            raise OverflowError('cannot convert float infinity to integer')
-        elif (type(b) is float('inf') or type(b) is float('-inf')):
-            raise OverflowError('cannot convert float infinity to integer')
-        elif(type(a) is float):
+        if(type(a) is float):
             a = int(a)
         elif(type(b) is float):
             b = int(b)
