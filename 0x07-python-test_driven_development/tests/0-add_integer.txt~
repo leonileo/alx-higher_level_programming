@@ -1,0 +1,65 @@
+=============================
+How to use 0-add_integer.txt
+=============================
+
+This module has one function called ``add_integer()``,
+it takes 2 arguments then it will cast the arguments to integers,
+after that it returns the addition of the two arguments.
+
+Numbers
+=======
+``add_integer()`` returns the summation of its arguments. For numbers,
+that value is equivalent to using the ``+`` operator.
+
+::
+
+   >>> add_integer = __import__('0-add_integer').add_integer
+   >>> add_integer(1, 2)
+   3
+
+::
+
+   >>> add_integer(100, -2)
+   98
+
+It also works with float numbers.
+
+::
+
+   >>> add_integer(100.3, -2)
+   98
+
+If we omit one argument it will perform the addition by using the default value from the second argument.
+
+::
+
+   >>> add_integer(2)
+   100
+
+::
+
+   >>> add_integer(-5)
+   93
+
+Non-Numbers
+===========
+
+The function will raise a ``TypeError`` if one of the arguments is not an int or a float.
+
+::
+
+   >>> add_integer(4, 'string')
+   Traceback (most recent call last):
+   TypeError: b must be an integer
+
+::
+
+   >>> add_integer(None)
+   Traceback (most recent call last):
+   TypeError: a must be an integer
+
+::
+
+   >>> add_integer((1,), 5)
+   Traceback (most recent call last):
+   TypeError: a must be an integer
