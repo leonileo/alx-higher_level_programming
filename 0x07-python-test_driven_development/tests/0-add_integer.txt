@@ -38,8 +38,9 @@ If we omit one argument it will perform the addition by using the default value 
 
 ::
 
-   >>> add_integer(-5)
-   93
+   >>> add_integer()
+   Traceback (most recent call last):
+   TypeError: add_integer() missing 1 required positional argument: 'a'
 
 Non-Numbers
 ===========
@@ -60,6 +61,6 @@ The function will raise a ``TypeError`` if one of the arguments is not an int or
 
 ::
 
-   >>> add_integer(float('-inf'), 5)
+   >>> add_integer(float('-inf'))
    Traceback (most recent call last):
    OverflowError: cannot convert float infinity to integer
