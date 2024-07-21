@@ -1,0 +1,50 @@
+===============================
+How to use 2-matrix_divided.py
+===============================
+
+This module has a function ``matrix_divided(...)``,
+it takes 2 arguments, a matrix and a div.
+The matrix must be lists of integers or floats,
+each row of the matrix must have the same size otherwise it'll raise a TypeError exception.
+and the div must be an int or a float it will raise a TypeError exception.
+the div can't be 0 or else it will raise a TypeError exception.
+If all the exeptions passes the function divides all the of the elements in the matrix provided.
+
+Numbers
+=======
+``matrix_divided(...)`` returns a new matrix after dividing each number from the matrix lists provided by the div.
+
+::
+
+   >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+   >>> matrix_divided([[1,2], [3,4]], 2)
+   [[0.50, 1.00], [1.50, 2.00]]
+
+::
+
+   >>> matrix_divided([[2.1, 4.5], [5.2, 6.2]], 3)
+   [[0.70, 1.50], [1.73, 2.06]]
+
+Non-numbers
+===========
+
+For data types other than int of floats it will raise TypeError exception.
+
+::
+
+   >>> matrix_divided([1, 3], 3)
+   Traceback (most recent call last):
+   TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+::
+
+   >>> matrix_divided([[2, 43], [3, 23, 10], 3)
+   Traceback (most recent call last):
+   TypeError: Each row of the matrix must have the same size
+
+::
+
+   >>> matrix_divided([[3,4,5], [12, 7, 32]], 0)
+   Traceback (most recent call last):
+   ZeroDivisionError: division by zero
+   
