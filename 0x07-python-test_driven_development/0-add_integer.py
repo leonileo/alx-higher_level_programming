@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-
-# 0-add_integer.py
-
 """This modlue has one function that adds two arguments by checking
 their types. The provided arguments must have a type of either
 integers or float, otherwise the function will raise a TypeError
@@ -18,8 +15,8 @@ def add_integer(a, b=98):
     elif (type(b) is not int and type(b) is not float):
         raise TypeError('b must be an integer')
     else:
-        if(type(a) is float):
+        if type(a) is float:
             a = int(a)
-        elif(type(b) is float):
+        elif type(b) is float:
             b = int(b)
-        return(a + b)
+        return a + b
