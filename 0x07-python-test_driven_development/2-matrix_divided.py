@@ -6,7 +6,11 @@ This module has a function matrix_divided() that returns a new matrix from the p
 
 
 def matrix_divided(matrix, div):
-    if (type(matrix) is not list):
+    if ((type(div) is not int) or (type(div) is not float ):
+        raise TypeError('div must be a number')
+    elif (div == 0):
+        raise ZeroDivisionError('division by zero')
+    elif (type(matrix) is not list):
         raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     for i in matrix:
         if(type(i) is not list):
