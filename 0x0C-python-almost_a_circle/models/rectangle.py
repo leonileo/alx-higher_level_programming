@@ -39,7 +39,7 @@ class Rectangle(Base):
         if type(value) is not int:
             raise TypeError('width must be an integer')
         elif value <= 0:
-            raise TypeError('Width must be > 0')
+            raise TypeError('width must be > 0')
         Rectangle.__width = value
 
         return Rectangle.__width
