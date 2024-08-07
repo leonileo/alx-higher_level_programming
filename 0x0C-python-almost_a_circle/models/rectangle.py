@@ -35,7 +35,13 @@ class Rectangle(Base):
         """ A setter function for private instance
         attribute ```__width```
         """
+        # checks for the input type
+        if type(value) is not int:
+            raise TypeError('width must be an integer')
+        elif value <= 0:
+            raise TypeError('Width must be > 0')
         Rectangle.__width = value
+
         return Rectangle.__width
 
     @property
@@ -50,6 +56,12 @@ class Rectangle(Base):
         """ A setter function for private instance
         attribute ```__height```
         """
+        # checks for the input type
+        if type(value) is not int:
+            raise TypeError('height must be an integer')
+        elif value <= 0:
+            raise TypeError('height must be > 0')
+
         Rectangle.__height = value
         return Rectangle.__height
 
@@ -65,6 +77,12 @@ class Rectangle(Base):
         """ A setter function for private instance
         attribute ```__x```
         """
+        # checks for the input type
+        if type(value) is not int:
+            raise TypeError('x must be an integer')
+        elif value < 0:
+            raise TypeError('x must be >= 0')
+
         Rectangle.__x = value
         return Rectangle.__x
 
@@ -80,5 +98,11 @@ class Rectangle(Base):
         """ A setter function for private instance
         attribute ```__y```
         """
+        # checks for the input type
+        if type(value) is not int:
+            raise TypeError('y must be an integer')
+        elif value < 0:
+            raise TypeError('y must be >= 0')
+
         Rectangle.__y = value
         return Rectangle.__y
