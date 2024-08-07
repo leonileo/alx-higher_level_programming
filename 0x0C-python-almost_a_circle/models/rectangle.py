@@ -27,6 +27,13 @@ class Rectangle(Base):
         """ Calculate the area of a rectangle."""
         return self.width * self.height
 
+    def display(self):
+        for i in range(self.height):
+            for j in range(self.width):
+                print("#", end="")
+            print()
+    # getter and setter functions
+
     @property
     def width(self):
         """ A getter function for private instance
