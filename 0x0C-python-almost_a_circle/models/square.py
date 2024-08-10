@@ -18,6 +18,7 @@ class Square(Rectangle):
         """ Getter function for size """
         return self.width
 
+    @size.setter
     def size(self, value):
         """ Sets the argument value to width """
         self.width = value
