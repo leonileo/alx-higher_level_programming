@@ -47,7 +47,6 @@ class Square(Rectangle):
                 if key == "y":
                     self.y = value
 
-
     def __str__(self):
         return "[{}] ({}) {}/{} - {}".format(
             self.__class__.__name__, self.id, self.x, self.y, self.size)
