@@ -36,6 +36,7 @@ class Base:
         return Base.__nb_objects
 
     def to_json_string(list_dictionaries):
+        """ Returns the JSON string representation of the argument list_dictionaries """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
