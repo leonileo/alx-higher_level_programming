@@ -3,6 +3,8 @@
 """ This module is has the base class that will be the
 base class for the others in the coming project."""
 
+import json
+
 
 class Base:
 
@@ -32,3 +34,8 @@ class Base:
         __nb_objects"""
         Base.__nb_objects = Base.__nb_objects + val
         return Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        return json.dumps(list_dictionaries)
