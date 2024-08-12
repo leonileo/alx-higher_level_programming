@@ -71,11 +71,12 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
-        return {'x': self.x,
-                'y': self.y,
-                'id': self.id,
+        return {'id': self.id,
+                'width': self.width,
                 'height': self.height,
-                'width': self.width}
+                'x': self.x,
+                'y': self.y
+                }
 
     # getter and setter functions
 
