@@ -24,7 +24,7 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-     def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         """ Assigns the arguments to attributes. """
         if args and len(args) != 0:
             for i in range(0, len(args)):
@@ -46,6 +46,7 @@ class Square(Rectangle):
                     self.x = value
                 if key == "y":
                     self.y = value
+
 
     def __str__(self):
         return "[{}] ({}) {}/{} - {}".format(
