@@ -35,6 +35,7 @@ class Base:
         Base.__nb_objects = Base.__nb_objects + val
         return Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """ Returns the JSON string representation of
 the argument list_dictionaries """
