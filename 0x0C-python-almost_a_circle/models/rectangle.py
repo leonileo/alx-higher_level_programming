@@ -70,6 +70,10 @@ class Rectangle(Base):
                 if key == "y":
                     self.y = value
 
+    def to_dictionary(self):
+        return {"x": self.x, "y": self.y, "id": 1,
+                "height": self.height, "width": self.width}
+
     # getter and setter functions
 
     @property
