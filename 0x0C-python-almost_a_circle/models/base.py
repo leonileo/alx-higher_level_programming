@@ -81,7 +81,7 @@ class Base:
         try:
             with open(file_name, "r") as jsonfile:
                 list_dicts = Base.from_json_string(jsonfile.read())
-                
+
                 list_instances = []
 
                 for i in list_dicts:
