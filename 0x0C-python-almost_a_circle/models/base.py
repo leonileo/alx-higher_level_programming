@@ -45,11 +45,11 @@ the argument list_dictionaries """
 
     def save_to_file(cls, list_objs):
         file_path = cls.__name__ + ".json"
-        
+
         with open(file_path, 'w') as f:
             if list_objs is None:
                 f.write("[]")
             else:
                 list_dict = []
-                [list_dict.append(i.to_dictionary()) for i in list_objs ]
+                [list_dict.append(i.to_dictionary()) for i in list_objs]
                 f.write(Base.to_json_string(list_dict))
