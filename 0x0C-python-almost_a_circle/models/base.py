@@ -53,3 +53,6 @@ the argument list_dictionaries """
                 list_dict = []
                 [list_dict.append(i.to_dictionary()) for i in list_objs]
                 f.write(Base.to_json_string(list_dict))
+
+if __name__ == "__main__":
+    pass
