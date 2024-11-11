@@ -1,66 +1,104 @@
-=============================
-How to use 0-add_integer.txt
-=============================
+# 0-add_integer.txt
 
-This module has one function called ``add_integer()``,
-it takes 2 arguments then it will cast the arguments to integers,
-after that it returns the addition of the two arguments.
+===========================
+How to use 0-add_integer.py
+===========================
 
-Numbers
-=======
-``add_integer()`` returns the summation of its arguments. For numbers,
-that value is equivalent to using the ``+`` operator.
+This module is very simple, since it only has one function
+called ``add_integer()``.
+
+Only one value 
+==============
+
+If we provide only one argument the function will calculate the value.
+
+::
+	>>> add_integer =  __import__('0-add_integer').add_integer
+	>>> add_integer(2)
+	100
 
 ::
 
-   >>> add_integer = __import__('0-add_integer').add_integer
-   >>> add_integer(1, 2)
-   3
+Two integers
+============
+
+When we pass two values, the second value will be calculated 
+straight from the provided argument.
 
 ::
 
-   >>> add_integer(100, -2)
-   98
-
-It also works with float numbers.
+	>>> add_integer(2, 5)
+	7
 
 ::
 
-   >>> add_integer(100.3, -2)
-   98
+Negative numbers
+================
 
-If we omit one argument it will perform the addition by using the default value from the second argument.
-
-::
-
-   >>> add_integer(2)
-   100
-
-Non-Numbers
-===========
-
-The function will raise a ``TypeError`` if one of the arguments is not an int or a float.
+The function will work with negative numbers too.
 
 ::
 
-   >>> add_integer(4, 'string')
-   Traceback (most recent call last):
-   TypeError: b must be an integer
+	>>> add_integer(-1, 2)
+	1
 
 ::
 
-   >>> add_integer(None)
-   Traceback (most recent call last):
-   TypeError: a must be an integer
+
+Float numbers
+=============
+
+If one of the argument is float, it will be casted into integer
+first then calculated.
 
 ::
 
-   >>> add_integer(float('-inf'))
-   Traceback (most recent call last):
-   OverflowError: cannot convert float infinity to integer
+	>>> add_integer(100.3, 2)
+	102
 
 ::
 
-   >>> add_integer(float('nan'))
-   Traceback (most recent call last):
-   ValueError: cannot convert float NaN to integer
+Large amount
+============
+
+::
+	>>> add_integer(2, float('inf'))
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+::
+
+	>>> add_integer(float('-inf'), 5)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+::
+
+Different data type
+===================
+
+::
+
+	>>> add_integer("string", [])
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+::
+
+NaN value
+=========
+
+	>>> add_integer(float('nan'), 8)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+None value
+==========
+
+::
+
+	>>> add_integer(3, None)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+::
