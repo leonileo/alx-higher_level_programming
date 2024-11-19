@@ -3,6 +3,7 @@
 
 
 class Base:
+    """This class creates an id on creation of a new class."""
 
     __nb_objects = 0
 
