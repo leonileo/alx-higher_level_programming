@@ -16,34 +16,42 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """A public getter for the private instance attribute width"""
         return self.__width
 
     @width.setter
     def width(self, val):
+        """A public setter for the private instance attribute width"""
         self.__width = val
 
     @property
     def height(self):
+        """A public getter for the private instance attribute height"""
         return self.__height
 
     @height.setter
     def height(self, val):
+        """A public setter for the private instance attribute height"""
         self.__height = val
 
     @property
     def x(self):
+        """A public getter for the private instance attribute x"""
         return self.__x
 
     @x.setter
     def x(self, val):
+        """A public setter for the private instance attribute x"""
         self.__x= val
 
     @property
     def y(self):
+        """A public getter for the private instance attribute y"""
         return self.__y
 
     @y.setter
     def y(self, val):
+        """A public setter for the private instance attribute y"""
         self.__y = val
 
 
