@@ -42,7 +42,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, val):
         """A public setter for the private instance attribute x"""
-        self.__x= val
+        self.__x = val
 
     @property
     def y(self):
@@ -53,5 +53,3 @@ class Rectangle(Base):
     def y(self, val):
         """A public setter for the private instance attribute y"""
         self.__y = val
-
-
