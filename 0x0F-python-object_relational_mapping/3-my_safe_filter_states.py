@@ -15,8 +15,8 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # Use parameterized query to prevent SQL injection
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    cur.execute(query, (state_name,))
+    query = "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC"
+    cur.execute(query, [state_name])
 
     # Fetch and print all results
     rows = cur.fetchall()
